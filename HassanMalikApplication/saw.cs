@@ -134,5 +134,18 @@ namespace HassanMalikApplication
             Application.Exit();
 
         }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+      
+        }
+
+        private void logOutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            login o = new login();
+            o.ShowDialog();
+        }
     }
 }

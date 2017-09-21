@@ -65,7 +65,8 @@ namespace HassanMalikApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.isUpdate) {
+            if (this.isUpdate)
+            {
 
 
                 UpdateKlyeMethod();
@@ -82,7 +83,7 @@ namespace HassanMalikApplication
         {
             try
             {
-                if (maleradioButton.Checked == false && femaleradioButton.Checked == false )
+                if (maleradioButton.Checked == false && femaleradioButton.Checked == false)
                 {
                     MessageBox.Show("Please Select Gender and Interest Correctly !!", "Error !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -148,7 +149,7 @@ namespace HassanMalikApplication
             {
 
 
-                if (nametextBox.Text == "" || agetextBox.Text == "" || feedbacktextBox.Text == "" || classtextBox.Text == "" || emailtextBox.Text == "" || countrycomboBox.Text == "" || citytextBox1.Text == "")
+                if (nametextBox.Text == "" || agetextBox.Text == "" ||  classtextBox.Text == "" || emailtextBox.Text == "" || countrycomboBox.Text == "" || citytextBox1.Text == "")
                 {
                     MessageBox.Show("Please Fill The Blank Textbox !!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -219,7 +220,7 @@ namespace HassanMalikApplication
             //image save krny k lye
             studentpictureBox.Image.Save(ms, studentpictureBox.Image.RawFormat);//ks format m save krni ha
             return ms.GetBuffer(); // lazmi
-         }
+        }
 
 
 
@@ -239,11 +240,11 @@ namespace HassanMalikApplication
 
         private int getGender()
         {
-            if(maleradioButton.Checked)
+            if (maleradioButton.Checked)
             {
                 return 1;
             }
-            if(femaleradioButton.Checked)
+            if (femaleradioButton.Checked)
             {
                 return 2;
             }
@@ -262,7 +263,8 @@ namespace HassanMalikApplication
 
 
             //gridview ma kse line pr click kry to wo insert form ma ajay
-            if (this.isUpdate) {
+            if (this.isUpdate)
+            {
 
                 DataTable dtStudentInfo = StdInfoMethod(this.studentP);//property/veriable ko this k sath dala ha jo uper bnae ti
 
@@ -274,7 +276,7 @@ namespace HassanMalikApplication
                 agetextBox.Text = row["Age"].ToString();
                 feedbacktextBox.Text = row["Feedback"].ToString();
                 citytextBox1.Text = row["City"].ToString();
-                
+
                 countrycomboBox.Text = row["Country"].ToString();
 
                 ////important
@@ -290,8 +292,8 @@ namespace HassanMalikApplication
                 dobdateTimePicker.Value = Convert.ToDateTime(row["Date Of Birth"]).Date;
 
                 //image k lye
-                studentpictureBox.Image = (row["Photo"] is DBNull) ? Resources.no_image :  GetPoto((byte[])row["Photo"]);
-                    //isko again byte array ma change krygy ms sy ak functionn bnaya ha
+                studentpictureBox.Image = (row["Photo"] is DBNull) ? Resources.no_image : GetPoto((byte[])row["Photo"]);
+                //isko again byte array ma change krygy ms sy ak functionn bnaya ha
 
             }
 
@@ -303,7 +305,7 @@ namespace HassanMalikApplication
         {
             MemoryStream ms = new MemoryStream(photo);
 
-           return Image.FromStream(ms);
+            return Image.FromStream(ms);
         }
 
 
@@ -351,7 +353,7 @@ namespace HassanMalikApplication
             ada.Fill(country);
 
             return country;
-            
+
         }
 
         private void viewbutton2_Click(object sender, EventArgs e)
@@ -382,10 +384,52 @@ namespace HassanMalikApplication
             ofd.Title = "Select The Photo";
             //ofd.Filter = "JPEG File (*.jpg)|*.JPG|  PNG File (*.png)|*.png|QIF File(*.qmf)|*.qmf";
             ofd.Filter = "Image File(*.jpg;*.png;*.qmf;*.gif)|*.jpg;*.png;*.qmf;*.gif";
-           if(ofd.ShowDialog() == DialogResult.OK) //
+            if (ofd.ShowDialog() == DialogResult.OK) //
             {//agr pic p click kry to jo dialogbox nzr ayga usmysy jo pic ko select krygy wo pic insert k 
                 //form ma nzr ayge
-                studentpictureBox.Image = new Bitmap(ofd.FileName); 
+                studentpictureBox.Image = new Bitmap(ofd.FileName);
+            }
+        }
+
+
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DeleteKlye();
+        }
+
+
+        public void DeleteKlye()
+        {
+            if (nametextBox.Text == string.Empty)
+            {
+                MessageBox.Show("First Select a row then Try Again !!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                string conn = ConfigurationManager.ConnectionStrings["testdb"].ConnectionString;
+                SqlConnection con = new SqlConnection(conn);
+                SqlCommand cmd = new SqlCommand("delet", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                cmd.Parameters.AddWithValue("@id", this.studentP);
+
+
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Delete Data Successfully", "DELETE DATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Hide();
+                saw s = new saw();
+                s.ShowDialog();
+
+
             }
         }
     }

@@ -18,6 +18,7 @@ namespace HassanMalikApplication
         {
             InitializeComponent();
         }
+        //private int logindetailwrong = 0;//br br login wrong krny waly ka accout disable krny k lye
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -26,14 +27,14 @@ namespace HassanMalikApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (IsValidated())
+            if (IsValidated()) //ye if k sath valid ha ye khali block k lye ha
             {
 
 
                 try {
                     bool usernamecorrect, passwordcorrect;
 
-                    GetUserLogin(out usernamecorrect,  out passwordcorrect);
+                    GetUserLogin(out usernamecorrect,  out passwordcorrect);//ye just method ha if k sath ni
                         {
 
                         if(usernamecorrect && passwordcorrect)
@@ -55,6 +56,9 @@ namespace HassanMalikApplication
                         }
                         else
                         {
+                            //idr is veriable ko increment krygy k 
+                            //logindetailwrong++;
+
                             if (!usernamecorrect)
                             {
                                 MessageBox.Show("Username is Not Correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -64,7 +68,18 @@ namespace HassanMalikApplication
                             }
                             else
                             {
+
                                 MessageBox.Show("Password is Not Correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                //password ma condition lgaygy na k username ma q k br br password wrong enter krny p 
+                                //account disable hona chaia
+                                //so idr lgaygy condition yad rkhy
+                                //if (logindetailwrong >= 3)
+                                //{
+                                //    MessageBox.Show("Disable This Account Please Contact with the \n Admin Hassan Malik", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                //    DisableThisAccount(); //ak method bnaya ha ta k accout disable hojay
+                                //}
+
                                 passwordtextBox.Clear();
                                 usernametextBox.Focus();
                             }
@@ -87,6 +102,29 @@ namespace HassanMalikApplication
             }
         }
 
+
+        //account ko disable krny k lye method bnaya ha
+        //private void DisableThisAccount()
+        //{
+        //    string connectionstring = ConfigurationManager.ConnectionStrings["testdb"].ConnectionString;
+        //    SqlConnection conn = new SqlConnection(connectionstring);
+        //    SqlCommand cmd = new SqlCommand("AccountDisable", conn);
+        //    cmd.CommandType = CommandType.StoredProcedure;
+
+        //    conn.Open();
+        //    cmd.Parameters.AddWithValue("@usernameDisableWala", usernametextBox.Text);
+
+        //    cmd.ExecuteNonQuery();
+
+        //}
+        /// <summary>
+        /// iska sp asy bnyga
+        /// create procedure AccountDisable
+        /// (@usernameDisableWala nvarchar(50) ) as begin set login where IsActive= 0 end 
+        /// agr 108 totu pr IsActive ko krta to ye isactive pr kam krta so phly isactive wala kam kry
+        /// </summary>
+        /// <param name="usernamecorrect"></param>
+        /// <param name="passwordcorrect"></param>
 
 
 
@@ -152,54 +190,6 @@ namespace HassanMalikApplication
 
 
 
-        //    //cut krna ha sara
-
-        //    private bool authenticated(string text1, string text2)
-        //    {
-
-        //        bool varr = false;
-        //        try
-        //        {
-
-        //            if (IsValidate()) { 
-
-
-
-        //                cmd.Parameters.Add("@username", SqlDbType.NVarChar, 50).Value = usernametextBox.Text;
-        //                cmd.Parameters.AddWithValue("@password", passwordtextBox.Text);
-
-        //                conn.Open();
-        //            varr =(bool) cmd.ExecuteScalar();
-        //                conn.Close();
-        //            }
-        //    }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show("Error in coding of login form" + ex.Message);
-        //        }
-        //        return varr;
-
-        //}
-
-
-
-        //    private bool IsValidate()
-        //    {
-
-
-        //        return true;
-        //    }
-
-
-
-        //    private void NewMethod()
-        //    {
-        //        usernametextBox.BackColor = Color.Red;
-        //        passwordtextBox.BackColor = Color.Red;
-        //        usernametextBox.ForeColor = Color.White;
-        //        passwordtextBox.ForeColor = Color.White;
-        //        usernametextBox.Focus();
-        //    }
 
     }
 }
