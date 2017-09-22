@@ -125,7 +125,6 @@ namespace HassanMalikApplication
 
         private void insertNewStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowStudentInfo(0, false); 
 
         }
 
@@ -146,6 +145,12 @@ namespace HassanMalikApplication
 
             login o = new login();
             o.ShowDialog();
+        }
+
+        private void oPERATIONsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowStudentInfo(0, false);
+
         }
     }
 }

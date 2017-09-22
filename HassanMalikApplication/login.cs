@@ -48,6 +48,7 @@ namespace HassanMalikApplication
                                 Properties.Settings.Default.Save();
                             }
 
+                            MessageBox.Show("Successfulley Login", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             saw o = new saw();
                             o.ShowDialog();
 

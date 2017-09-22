@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dooffy-Characters-H1.ico" />
+    <None Include="Resources\21752254_1977881782447372_7560494485364398465_n.jpg" />
     <None Include="Resources\login.jpg" />
     <None Include="Resources\l.png" />
     <None Include="Resources\no image.jpg" />

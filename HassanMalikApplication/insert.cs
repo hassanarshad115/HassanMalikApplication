@@ -182,7 +182,7 @@ namespace HassanMalikApplication
                     cmd.Parameters.AddWithValue("@dob", dobdateTimePicker.Value.Date);//.value.date k sath likhna ha
                     if (maleradioButton.Checked == false && femaleradioButton.Checked == false)
                     {
-                        MessageBox.Show("Please Select Gender !!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please Select Gender and Interest !!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
@@ -406,30 +406,37 @@ namespace HassanMalikApplication
             if (nametextBox.Text == string.Empty)
             {
                 MessageBox.Show("First Select A Row Then Try Again !!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
+
             else
+
             {
-                string conn = ConfigurationManager.ConnectionStrings["testdb"].ConnectionString;
-                SqlConnection con = new SqlConnection(conn);
-                SqlCommand cmd = new SqlCommand("delet", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                DialogResult resullt = MessageBox.Show("Do you want to Delete Record ?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resullt == DialogResult.Yes)
+                {
+                    string conn = ConfigurationManager.ConnectionStrings["testdb"].ConnectionString;
+                    SqlConnection con = new SqlConnection(conn);
+                    SqlCommand cmd = new SqlCommand("delet", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
 
-                cmd.Parameters.AddWithValue("@id", this.studentP);
+                    cmd.Parameters.AddWithValue("@id", this.studentP);
 
 
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Delete Data Successfully", "DELETE DATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                this.Hide();
-                saw s = new saw();
-                s.ShowDialog();
+                    MessageBox.Show("Delete Data Successfully", "DELETE DATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Hide();
+                    saw s = new saw();
+                    s.ShowDialog();
 
 
+                }
             }
         }
     }

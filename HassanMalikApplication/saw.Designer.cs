@@ -39,12 +39,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oPERATIONsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertNewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oPERATIONsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertNewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.sawdataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -161,6 +161,18 @@
             this.closeToolStripMenuItem.Text = "&Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 6);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.logOutToolStripMenuItem.Text = "&LogOut";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
             // oPERATIONsToolStripMenuItem
             // 
             this.oPERATIONsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -169,6 +181,7 @@
             this.oPERATIONsToolStripMenuItem.Name = "oPERATIONsToolStripMenuItem";
             this.oPERATIONsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.oPERATIONsToolStripMenuItem.Text = "&New";
+            this.oPERATIONsToolStripMenuItem.Click += new System.EventHandler(this.oPERATIONsToolStripMenuItem_Click);
             // 
             // insertNewStudentToolStripMenuItem
             // 
@@ -176,6 +189,13 @@
             this.insertNewStudentToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.insertNewStudentToolStripMenuItem.Text = "&Add New Student";
             this.insertNewStudentToolStripMenuItem.Click += new System.EventHandler(this.insertNewStudentToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem1
+            // 
+            this.logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
+            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(59, 20);
+            this.logOutToolStripMenuItem1.Text = "&LogOut";
+            this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
             // 
             // pictureBox1
             // 
@@ -190,25 +210,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.logOutToolStripMenuItem.Text = "&LogOut";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
-            // logOutToolStripMenuItem1
-            // 
-            this.logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
-            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(59, 20);
-            this.logOutToolStripMenuItem1.Text = "&LogOut";
-            this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
             // 
             // saw
             // 
