@@ -151,7 +151,7 @@ namespace HassanMalikApplication
 
                 if (nametextBox.Text == "" || agetextBox.Text == "" ||  classtextBox.Text == "" || emailtextBox.Text == "" || countrycomboBox.Text == "" || citytextBox1.Text == "")
                 {
-                    MessageBox.Show("Please Fill The Blank Textbox !!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Fill all Blank Box !!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -194,7 +194,7 @@ namespace HassanMalikApplication
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
-                        MessageBox.Show("Enter Data Successfully", "ENTER DATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Save Data Successfully", "ENTER DATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //jsy he insert ya update data krygy usky bad message show hoga fr ye saw form ki trf chla jayga
                         this.Hide();
@@ -405,7 +405,7 @@ namespace HassanMalikApplication
         {
             if (nametextBox.Text == string.Empty)
             {
-                MessageBox.Show("First Select a row then Try Again !!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("First Select A Row Then Try Again !!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else

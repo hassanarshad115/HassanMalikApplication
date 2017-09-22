@@ -188,8 +188,9 @@ namespace HassanMalikApplication
             usernametextBox.Text= Properties.Settings.Default.UserName;
         }
 
-
-
-
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://allice9554.000webhostapp.com/");
+        }
     }
 }

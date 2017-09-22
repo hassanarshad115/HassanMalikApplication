@@ -36,6 +36,7 @@
             this.passwordtextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.remembermecheckBox = new System.Windows.Forms.CheckBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,10 +115,23 @@
             this.remembermecheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.remembermecheckBox.Location = new System.Drawing.Point(201, 167);
             this.remembermecheckBox.Name = "remembermecheckBox";
-            this.remembermecheckBox.Size = new System.Drawing.Size(151, 21);
+            this.remembermecheckBox.Size = new System.Drawing.Size(123, 21);
             this.remembermecheckBox.TabIndex = 3;
-            this.remembermecheckBox.Text = "Remember me later";
+            this.remembermecheckBox.Text = "Remember me ";
             this.remembermecheckBox.UseVisualStyleBackColor = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.LinkColor = System.Drawing.Color.DarkBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(-2, 240);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(151, 13);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://www.hassanmalik.com";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // login
             // 
@@ -126,6 +140,7 @@
             this.BackgroundImage = global::HassanMalikApplication.Properties.Resources.l;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(490, 260);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.remembermecheckBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.passwordtextBox);
@@ -155,5 +170,6 @@
         private System.Windows.Forms.TextBox passwordtextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox remembermecheckBox;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
