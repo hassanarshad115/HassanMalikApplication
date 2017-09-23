@@ -161,7 +161,7 @@
             this.csharpcheckBox.Location = new System.Drawing.Point(389, 58);
             this.csharpcheckBox.Name = "csharpcheckBox";
             this.csharpcheckBox.Size = new System.Drawing.Size(48, 24);
-            this.csharpcheckBox.TabIndex = 4;
+            this.csharpcheckBox.TabIndex = 6;
             this.csharpcheckBox.Text = "&C#";
             this.csharpcheckBox.UseVisualStyleBackColor = true;
             // 
@@ -173,7 +173,7 @@
             this.javacheckBox.Location = new System.Drawing.Point(434, 58);
             this.javacheckBox.Name = "javacheckBox";
             this.javacheckBox.Size = new System.Drawing.Size(69, 24);
-            this.javacheckBox.TabIndex = 5;
+            this.javacheckBox.TabIndex = 7;
             this.javacheckBox.Text = "&JAVA";
             this.javacheckBox.UseVisualStyleBackColor = true;
             // 
@@ -185,7 +185,7 @@
             this.phpcheckBox.Location = new System.Drawing.Point(502, 58);
             this.phpcheckBox.Name = "phpcheckBox";
             this.phpcheckBox.Size = new System.Drawing.Size(60, 24);
-            this.phpcheckBox.TabIndex = 6;
+            this.phpcheckBox.TabIndex = 8;
             this.phpcheckBox.Text = "&PHP";
             this.phpcheckBox.UseVisualStyleBackColor = true;
             this.phpcheckBox.CheckedChanged += new System.EventHandler(this.phpcheckBox_CheckedChanged);
@@ -209,7 +209,7 @@
             this.maleradioButton.Location = new System.Drawing.Point(390, 102);
             this.maleradioButton.Name = "maleradioButton";
             this.maleradioButton.Size = new System.Drawing.Size(61, 24);
-            this.maleradioButton.TabIndex = 7;
+            this.maleradioButton.TabIndex = 9;
             this.maleradioButton.TabStop = true;
             this.maleradioButton.Text = "&Male";
             this.maleradioButton.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@
             this.femaleradioButton.Location = new System.Drawing.Point(482, 102);
             this.femaleradioButton.Name = "femaleradioButton";
             this.femaleradioButton.Size = new System.Drawing.Size(80, 24);
-            this.femaleradioButton.TabIndex = 8;
+            this.femaleradioButton.TabIndex = 10;
             this.femaleradioButton.TabStop = true;
             this.femaleradioButton.Text = "&Female";
             this.femaleradioButton.UseVisualStyleBackColor = true;
@@ -267,7 +267,7 @@
             this.dobdateTimePicker.Location = new System.Drawing.Point(390, 147);
             this.dobdateTimePicker.Name = "dobdateTimePicker";
             this.dobdateTimePicker.Size = new System.Drawing.Size(167, 23);
-            this.dobdateTimePicker.TabIndex = 9;
+            this.dobdateTimePicker.TabIndex = 11;
             this.dobdateTimePicker.Value = new System.DateTime(2017, 9, 17, 0, 0, 0, 0);
             // 
             // tabControl1
@@ -303,7 +303,7 @@
             this.citytextBox1.Name = "citytextBox1";
             this.citytextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.citytextBox1.Size = new System.Drawing.Size(244, 64);
-            this.citytextBox1.TabIndex = 2;
+            this.citytextBox1.TabIndex = 4;
             // 
             // label9
             // 
@@ -335,7 +335,7 @@
             this.feedbacktextBox.Name = "feedbacktextBox";
             this.feedbacktextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.feedbacktextBox.Size = new System.Drawing.Size(252, 118);
-            this.feedbacktextBox.TabIndex = 2;
+            this.feedbacktextBox.TabIndex = 12;
             // 
             // tabPage3
             // 
@@ -370,7 +370,7 @@
             this.label11.Location = new System.Drawing.Point(3, 3);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(182, 100);
-            this.label11.TabIndex = 0;
+            this.label11.TabIndex = 13;
             this.label11.Text = "Hassan Arshad\r\nFrom Islamia University \r\nBWP\r\nBahawalNagar Campus\r\nContact= 0334-" +
     "9055786\r\n";
             // 
@@ -393,7 +393,7 @@
             this.viewbutton2.Location = new System.Drawing.Point(316, 354);
             this.viewbutton2.Name = "viewbutton2";
             this.viewbutton2.Size = new System.Drawing.Size(68, 29);
-            this.viewbutton2.TabIndex = 9;
+            this.viewbutton2.TabIndex = 14;
             this.viewbutton2.Text = "&PreView ";
             this.viewbutton2.UseVisualStyleBackColor = true;
             this.viewbutton2.Click += new System.EventHandler(this.viewbutton2_Click);
@@ -426,7 +426,7 @@
             this.button2.Location = new System.Drawing.Point(491, 354);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 29);
-            this.button2.TabIndex = 9;
+            this.button2.TabIndex = 15;
             this.button2.Text = "&Delete";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -455,7 +455,7 @@
             this.button1.Location = new System.Drawing.Point(389, 354);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 29);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 13;
             this.button1.Text = "&SAVE ";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);

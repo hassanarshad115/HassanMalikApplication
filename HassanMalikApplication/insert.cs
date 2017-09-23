@@ -83,53 +83,64 @@ namespace HassanMalikApplication
         {
             try
             {
-                if (maleradioButton.Checked == false && femaleradioButton.Checked == false)
+
+                DialogResult resullt = MessageBox.Show("Do you want to Update Record ?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resullt == DialogResult.Yes)
                 {
-                    MessageBox.Show("Please Select Gender and Interest Correctly !!", "Error !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    string conn = ConfigurationManager.ConnectionStrings["testdb"].ConnectionString;
-                    SqlConnection con = new SqlConnection(conn);
-                    SqlCommand cmd = new SqlCommand("updat", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.AddWithValue("@id", this.studentP);
-                    cmd.Parameters.AddWithValue("@name", nametextBox.Text);
-                    //cmd.Parameters.Add("@name", SqlDbType.NVarChar, 50).Value = nametextBox.Text;
-                    cmd.Parameters.Add("@age", SqlDbType.NVarChar, 55).Value = agetextBox.Text;
-                    cmd.Parameters.Add("@feedback", SqlDbType.NVarChar, 50).Value = feedbacktextBox.Text;
-                    cmd.Parameters.AddWithValue("@class", classtextBox.Text);
-                    cmd.Parameters.AddWithValue("@email", emailtextBox.Text);
-
-                    //checked hoga text ni ayga . kbad iski type bit hoge
-                    cmd.Parameters.AddWithValue("@csharp", csharpcheckBox.Checked);
-                    cmd.Parameters.AddWithValue("@java", javacheckBox.Checked);
-                    cmd.Parameters.AddWithValue("@php", phpcheckBox.Checked);
-
-                    cmd.Parameters.AddWithValue("@city", citytextBox1.Text);
-                    //country ka alg table bnaygy fr sp ma b country ko lygy enter waly r h jo asl table ha usmy
-                    //b country name sy ak colom lygy q k dekhany k lye ye sp r h ko use kryga r
-                    //pic yni fetch ye c waly table sy he kryga
-                    cmd.Parameters.AddWithValue("@country", countrycomboBox.Text);
-
-                    cmd.Parameters.AddWithValue("@dob", dobdateTimePicker.Value.Date);
-
-                    cmd.Parameters.AddWithValue("@gender", getGender());
-
-                    //image k lye
-                    cmd.Parameters.AddWithValue("@photo", SavePhoto());
 
 
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("Update Data Successfully", "ENTER DATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    this.Hide();
-                    saw s = new saw();
-                    s.ShowDialog();
 
+
+                    if (maleradioButton.Checked == false && femaleradioButton.Checked == false)
+                    {
+                        MessageBox.Show("Please Select Gender and Interest Correctly !!", "Error !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        string conn = ConfigurationManager.ConnectionStrings["testdb"].ConnectionString;
+                        SqlConnection con = new SqlConnection(conn);
+                        SqlCommand cmd = new SqlCommand("updat", con);
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@id", this.studentP);
+                        cmd.Parameters.AddWithValue("@name", nametextBox.Text);
+                        //cmd.Parameters.Add("@name", SqlDbType.NVarChar, 50).Value = nametextBox.Text;
+                        cmd.Parameters.Add("@age", SqlDbType.NVarChar, 55).Value = agetextBox.Text;
+                        cmd.Parameters.Add("@feedback", SqlDbType.NVarChar, 50).Value = feedbacktextBox.Text;
+                        cmd.Parameters.AddWithValue("@class", classtextBox.Text);
+                        cmd.Parameters.AddWithValue("@email", emailtextBox.Text);
+
+                        //checked hoga text ni ayga . kbad iski type bit hoge
+                        cmd.Parameters.AddWithValue("@csharp", csharpcheckBox.Checked);
+                        cmd.Parameters.AddWithValue("@java", javacheckBox.Checked);
+                        cmd.Parameters.AddWithValue("@php", phpcheckBox.Checked);
+
+                        cmd.Parameters.AddWithValue("@city", citytextBox1.Text);
+                        //country ka alg table bnaygy fr sp ma b country ko lygy enter waly r h jo asl table ha usmy
+                        //b country name sy ak colom lygy q k dekhany k lye ye sp r h ko use kryga r
+                        //pic yni fetch ye c waly table sy he kryga
+                        cmd.Parameters.AddWithValue("@country", countrycomboBox.Text);
+
+                        cmd.Parameters.AddWithValue("@dob", dobdateTimePicker.Value.Date);
+
+                        cmd.Parameters.AddWithValue("@gender", getGender());
+
+                        //image k lye
+                        cmd.Parameters.AddWithValue("@photo", SavePhoto());
+
+
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Update Data Successfully", "ENTER DATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.Hide();
+                        saw s = new saw();
+                        s.ShowDialog();
+
+                    }
                 }
             }
             catch (Exception ex)
@@ -194,7 +205,7 @@ namespace HassanMalikApplication
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
-                        MessageBox.Show("Save Data Successfully", "ENTER DATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Save Data Successfully", "SAVE DATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //jsy he insert ya update data krygy usky bad message show hoga fr ye saw form ki trf chla jayga
                         this.Hide();

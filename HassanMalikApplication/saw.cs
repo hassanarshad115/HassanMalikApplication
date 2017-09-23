@@ -143,8 +143,11 @@ namespace HassanMalikApplication
         {
             this.Hide();
 
-            login o = new login();
-            o.ShowDialog();
+            login lg = new login();
+            lg.ShowDialog();
+            //fr ye likhna ha nichy ta k ye access kr sky
+            //Program.lg.ShowDialog();
+
         }
 
         private void oPERATIONsToolStripMenuItem_Click(object sender, EventArgs e)

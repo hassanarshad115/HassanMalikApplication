@@ -48,7 +48,6 @@ namespace HassanMalikApplication
                                 Properties.Settings.Default.Save();
                             }
 
-                            MessageBox.Show("Successfulley Login", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             saw o = new saw();
                             o.ShowDialog();
 
@@ -82,7 +81,8 @@ namespace HassanMalikApplication
                                 //}
 
                                 passwordtextBox.Clear();
-                                usernametextBox.Focus();
+                                passwordtextBox.Focus();
+                                //usernametextBox.Focus();
                             }
 
                         }
@@ -175,6 +175,7 @@ namespace HassanMalikApplication
             if (passwordtextBox.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Password is Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                passwordtextBox.Focus();
                 passwordtextBox.Clear();
                 return false;
             }
@@ -192,6 +193,14 @@ namespace HassanMalikApplication
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://allice9554.000webhostapp.com/");
+        }
+
+        private void login_VisibleChanged(object sender, EventArgs e)
+        {
+            //usernametextBox.Clear();
+            //passwordtextBox.Clear();
+
+            //usernametextBox.Focus();
         }
     }
 }

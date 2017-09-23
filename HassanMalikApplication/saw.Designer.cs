@@ -40,11 +40,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oPERATIONsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertNewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.oPERATIONsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertNewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.sawdataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -164,31 +164,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 6);
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.logOutToolStripMenuItem.Text = "&LogOut";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
-            // oPERATIONsToolStripMenuItem
-            // 
-            this.oPERATIONsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.insertNewStudentToolStripMenuItem});
-            this.oPERATIONsToolStripMenuItem.Image = global::HassanMalikApplication.Properties.Resources.newclient;
-            this.oPERATIONsToolStripMenuItem.Name = "oPERATIONsToolStripMenuItem";
-            this.oPERATIONsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.oPERATIONsToolStripMenuItem.Text = "&New";
-            this.oPERATIONsToolStripMenuItem.Click += new System.EventHandler(this.oPERATIONsToolStripMenuItem_Click);
-            // 
-            // insertNewStudentToolStripMenuItem
-            // 
-            this.insertNewStudentToolStripMenuItem.Name = "insertNewStudentToolStripMenuItem";
-            this.insertNewStudentToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.insertNewStudentToolStripMenuItem.Text = "&Add New Student";
-            this.insertNewStudentToolStripMenuItem.Click += new System.EventHandler(this.insertNewStudentToolStripMenuItem_Click);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // logOutToolStripMenuItem1
             // 
@@ -210,6 +186,28 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // oPERATIONsToolStripMenuItem
+            // 
+            this.oPERATIONsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.insertNewStudentToolStripMenuItem});
+            this.oPERATIONsToolStripMenuItem.Image = global::HassanMalikApplication.Properties.Resources.newclient;
+            this.oPERATIONsToolStripMenuItem.Name = "oPERATIONsToolStripMenuItem";
+            this.oPERATIONsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.oPERATIONsToolStripMenuItem.Text = "&New";
+            this.oPERATIONsToolStripMenuItem.Click += new System.EventHandler(this.oPERATIONsToolStripMenuItem_Click);
+            // 
+            // insertNewStudentToolStripMenuItem
+            // 
+            this.insertNewStudentToolStripMenuItem.Name = "insertNewStudentToolStripMenuItem";
+            this.insertNewStudentToolStripMenuItem.Size = new System.Drawing.Size(149, 6);
+            this.insertNewStudentToolStripMenuItem.Click += new System.EventHandler(this.insertNewStudentToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(149, 6);
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // saw
             // 
@@ -252,9 +250,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oPERATIONsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem insertNewStudentToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator insertNewStudentToolStripMenuItem;
     }
 }
