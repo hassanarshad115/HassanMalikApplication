@@ -37,6 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.remembermecheckBox = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.passwordcheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,12 +114,13 @@
             this.remembermecheckBox.BackColor = System.Drawing.Color.Transparent;
             this.remembermecheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remembermecheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.remembermecheckBox.Location = new System.Drawing.Point(201, 167);
+            this.remembermecheckBox.Location = new System.Drawing.Point(199, 189);
             this.remembermecheckBox.Name = "remembermecheckBox";
             this.remembermecheckBox.Size = new System.Drawing.Size(123, 21);
             this.remembermecheckBox.TabIndex = 3;
             this.remembermecheckBox.Text = "Remember me ";
             this.remembermecheckBox.UseVisualStyleBackColor = false;
+            this.remembermecheckBox.CheckedChanged += new System.EventHandler(this.remembermecheckBox_CheckedChanged);
             // 
             // linkLabel1
             // 
@@ -133,6 +135,20 @@
             this.linkLabel1.Text = "https://www.hassanmalik.com";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // passwordcheckBox
+            // 
+            this.passwordcheckBox.AutoSize = true;
+            this.passwordcheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.passwordcheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordcheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.passwordcheckBox.Location = new System.Drawing.Point(199, 162);
+            this.passwordcheckBox.Name = "passwordcheckBox";
+            this.passwordcheckBox.Size = new System.Drawing.Size(114, 19);
+            this.passwordcheckBox.TabIndex = 3;
+            this.passwordcheckBox.Text = "&Show Password";
+            this.passwordcheckBox.UseVisualStyleBackColor = false;
+            this.passwordcheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,6 +157,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(490, 260);
             this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.passwordcheckBox);
             this.Controls.Add(this.remembermecheckBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.passwordtextBox);
@@ -172,5 +189,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox remembermecheckBox;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.CheckBox passwordcheckBox;
     }
 }

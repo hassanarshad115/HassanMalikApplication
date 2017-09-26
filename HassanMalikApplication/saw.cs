@@ -141,10 +141,10 @@ namespace HassanMalikApplication
 
         private void logOutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
 
             login lg = new login();
-            lg.ShowDialog();
+            lg.Show();
             //fr ye likhna ha nichy ta k ye access kr sky
             //Program.lg.ShowDialog();
 
@@ -154,6 +154,17 @@ namespace HassanMalikApplication
         {
             ShowStudentInfo(0, false);
 
+        }
+
+        private void passwordChangeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            NewUser nu = new NewUser();
+            nu.ShowDialog();
+            
+            //this.Hide();
+            //Pchange pc = new Pchange();
+            //pc.ShowDialog();
         }
     }
 }

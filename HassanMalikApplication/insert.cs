@@ -58,7 +58,7 @@ namespace HassanMalikApplication
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
 
@@ -394,7 +394,7 @@ namespace HassanMalikApplication
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "Select The Photo";
             //ofd.Filter = "JPEG File (*.jpg)|*.JPG|  PNG File (*.png)|*.png|QIF File(*.qmf)|*.qmf";
-            ofd.Filter = "Image File(*.jpg;*.png;*.qmf;*.gif)|*.jpg;*.png;*.qmf;*.gif";
+            ofd.Filter = "Image File(*.jpg;*.png;*.qmf;*.gif)|*.jpg;*.png;*.qmf;*.gif;.*mp4";
             if (ofd.ShowDialog() == DialogResult.OK) //
             {//agr pic p click kry to jo dialogbox nzr ayga usmysy jo pic ko select krygy wo pic insert k 
                 //form ma nzr ayge

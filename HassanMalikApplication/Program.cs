@@ -21,7 +21,7 @@ namespace HassanMalikApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new Chart());
 
             //lg = new login(); ye r nichy wali line on krdyn agr memory ko save krna ha to 
             //104 T

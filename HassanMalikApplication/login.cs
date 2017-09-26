@@ -31,13 +31,14 @@ namespace HassanMalikApplication
             {
 
 
-                try {
+                try
+                {
                     bool usernamecorrect, passwordcorrect;
 
-                    GetUserLogin(out usernamecorrect,  out passwordcorrect);//ye just method ha if k sath ni
-                        {
+                    GetUserLogin(out usernamecorrect, out passwordcorrect);//ye just method ha if k sath ni
+                    {
 
-                        if(usernamecorrect && passwordcorrect)
+                        if (usernamecorrect && passwordcorrect)
                         {
                             this.Hide();
 
@@ -94,7 +95,7 @@ namespace HassanMalikApplication
 
                 }
 
-                catch(ApplicationException ex)
+                catch (ApplicationException ex)
                 {
                     MessageBox.Show("Error in coding of login form" + ex.Message);
 
@@ -144,19 +145,20 @@ namespace HassanMalikApplication
             cmd.Parameters.Add("@Ispassword", SqlDbType.Bit).Direction = ParameterDirection.Output;
 
             cmd.Parameters.AddWithValue("@username", usernametextBox.Text);
-            cmd.Parameters.AddWithValue("@password", passwordtextBox.Text);
+            //Encrypt class bnae ha ak usmy encrypt krny k lye coding ki ha
+            //cmd.Parameters.AddWithValue("@password",EncryptClass.encrypt(passwordtextBox.Text));//passwored encrypt hojayga ta k hacking na ho
 
+            cmd.Parameters.AddWithValue("@password",passwordtextBox.Text);
             cmd.ExecuteNonQuery();
 
             //agr ye na kia to GetUserLogin red hojayga error ayga
-            usernamecorrect =(bool) cmd.Parameters["@Isusername"].Value;
-            passwordcorrect =(bool) cmd.Parameters["@Ispassword"].Value;
+            usernamecorrect = (bool)cmd.Parameters["@Isusername"].Value;
+            passwordcorrect = (bool)cmd.Parameters["@Ispassword"].Value;
 
 
 
 
         }
-
 
 
 
@@ -187,7 +189,7 @@ namespace HassanMalikApplication
 
         private void login_Load(object sender, EventArgs e)
         {
-            usernametextBox.Text= Properties.Settings.Default.UserName;
+            usernametextBox.Text = Properties.Settings.Default.UserName;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -201,6 +203,39 @@ namespace HassanMalikApplication
             //passwordtextBox.Clear();
 
             //usernametextBox.Focus();
+        }
+
+        private void remembermecheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            checkboxklye();
+        }
+        public void checkboxklye()
+        {
+
+            if (passwordcheckBox.Checked)
+            {
+                passwordtextBox.PasswordChar = default(Char);
+            }
+            if (!passwordcheckBox.Checked)
+            {
+                passwordtextBox.PasswordChar = Convert.ToChar("*");
+            }
+
+            //if (showpasswordcheckBox1.Checked)
+            //{
+            //    passwordtextBox.PasswordChar = default(Char);
+            //    confirmpasswordtextBox.PasswordChar = default(Char);
+            //}
+            //if (!showpasswordcheckBox1.Checked)
+            //{
+            //    passwordtextBox.PasswordChar = Convert.ToChar("*");
+            //    confirmpasswordtextBox.PasswordChar = Convert.ToChar("*");
+            //}
         }
     }
 }

@@ -41,10 +41,12 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.passwordChangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.oPERATIONsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertNewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.sawdataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -144,7 +146,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.closeToolStripMenuItem,
             this.oPERATIONsToolStripMenuItem,
-            this.logOutToolStripMenuItem1});
+            this.logOutToolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.passwordChangeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(961, 24);
@@ -164,7 +168,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(57, 6);
             // 
             // logOutToolStripMenuItem1
             // 
@@ -172,6 +176,25 @@
             this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(59, 20);
             this.logOutToolStripMenuItem1.Text = "&LogOut";
             this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(57, 6);
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem2.Text = "|";
+            // 
+            // passwordChangeToolStripMenuItem
+            // 
+            this.passwordChangeToolStripMenuItem.Name = "passwordChangeToolStripMenuItem";
+            this.passwordChangeToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.passwordChangeToolStripMenuItem.Text = "&ChangePassword";
+            this.passwordChangeToolStripMenuItem.Click += new System.EventHandler(this.passwordChangeToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -200,14 +223,8 @@
             // insertNewStudentToolStripMenuItem
             // 
             this.insertNewStudentToolStripMenuItem.Name = "insertNewStudentToolStripMenuItem";
-            this.insertNewStudentToolStripMenuItem.Size = new System.Drawing.Size(149, 6);
+            this.insertNewStudentToolStripMenuItem.Size = new System.Drawing.Size(57, 6);
             this.insertNewStudentToolStripMenuItem.Click += new System.EventHandler(this.insertNewStudentToolStripMenuItem_Click);
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(149, 6);
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // saw
             // 
@@ -254,5 +271,7 @@
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator insertNewStudentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem passwordChangeToolStripMenuItem;
     }
 }
