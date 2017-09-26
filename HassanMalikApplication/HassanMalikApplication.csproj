@@ -57,6 +57,12 @@
       <DependentUpon>Chart.cs</DependentUpon>
     </Compile>
     <Compile Include="EncryptClass.cs" />
+    <Compile Include="Genderchart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genderchart.Designer.cs">
+      <DependentUpon>Genderchart.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginClass.cs" />
     <Compile Include="insert.cs">
       <SubType>Form</SubType>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="Chart.resx">
       <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genderchart.resx">
+      <DependentUpon>Genderchart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="insert.resx">
       <DependentUpon>insert.cs</DependentUpon>
@@ -134,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dooffy-Characters-H1.ico" />
+    <None Include="Resources\check memory.png" />
+    <None Include="Resources\check gender.png" />
+    <None Include="Resources\home pagee.png" />
     <None Include="Resources\go.png" />
     <None Include="Resources\new user signup.jpg" />
     <None Include="Resources\save as.jpg" />

@@ -32,17 +32,19 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chart));
             this.label1 = new System.Windows.Forms.Label();
             this.fromcomboBox = new System.Windows.Forms.ComboBox();
             this.yearchart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
             this.tocomboBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gobutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.yearchart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 14);
+            this.label1.Location = new System.Drawing.Point(170, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 17);
             this.label1.TabIndex = 0;
@@ -79,7 +81,7 @@
             "2015",
             "2016",
             "2017"});
-            this.fromcomboBox.Location = new System.Drawing.Point(51, 12);
+            this.fromcomboBox.Location = new System.Drawing.Point(212, 12);
             this.fromcomboBox.Name = "fromcomboBox";
             this.fromcomboBox.Size = new System.Drawing.Size(121, 24);
             this.fromcomboBox.TabIndex = 1;
@@ -110,13 +112,23 @@
             title1.ForeColor = System.Drawing.Color.DarkRed;
             title1.Name = "No of Student By Year";
             title1.Text = "No of Students By Year";
+            title2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            title2.Name = "Title1";
+            title2.Text = "Year";
+            title3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Left;
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            title3.Name = "Title2";
+            title3.Text = "Total";
             this.yearchart1.Titles.Add(title1);
+            this.yearchart1.Titles.Add(title2);
+            this.yearchart1.Titles.Add(title3);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(193, 15);
+            this.label2.Location = new System.Drawing.Point(336, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 17);
             this.label2.TabIndex = 0;
@@ -145,31 +157,21 @@
             "2015",
             "2016",
             "2017"});
-            this.tocomboBox.Location = new System.Drawing.Point(221, 12);
+            this.tocomboBox.Location = new System.Drawing.Point(364, 12);
             this.tocomboBox.Name = "tocomboBox";
             this.tocomboBox.Size = new System.Drawing.Size(121, 24);
             this.tocomboBox.TabIndex = 1;
             // 
-            // label3
+            // pictureBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(383, 367);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Years";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(13, 211);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Total Students";
+            this.pictureBox2.Image = global::HassanMalikApplication.Properties.Resources.home_pagee;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -188,7 +190,7 @@
             this.gobutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gobutton.BackgroundImage")));
             this.gobutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gobutton.Location = new System.Drawing.Point(399, 9);
+            this.gobutton.Location = new System.Drawing.Point(507, 9);
             this.gobutton.Name = "gobutton";
             this.gobutton.Size = new System.Drawing.Size(36, 28);
             this.gobutton.TabIndex = 3;
@@ -200,8 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 405);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gobutton);
             this.Controls.Add(this.yearchart1);
@@ -216,6 +217,7 @@
             this.Text = "Chart";
             this.Load += new System.EventHandler(this.Chart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.yearchart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,7 +233,6 @@
         private System.Windows.Forms.ComboBox tocomboBox;
         private System.Windows.Forms.Button gobutton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -54,6 +54,8 @@ namespace HassanMalikApplication
             cmd.Parameters.AddWithValue("@from", fromcomboBox.Text);
             cmd.Parameters.AddWithValue("@to", tocomboBox.Text);
 
+
+
             SqlDataReader reader = cmd.ExecuteReader();
             dt.Load(reader);
 
@@ -85,6 +87,13 @@ namespace HassanMalikApplication
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            saw s = new saw();
+            s.ShowDialog(); 
         }
     }
 }

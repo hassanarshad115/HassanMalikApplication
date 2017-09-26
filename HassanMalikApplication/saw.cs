@@ -166,5 +166,20 @@ namespace HassanMalikApplication
             //Pchange pc = new Pchange();
             //pc.ShowDialog();
         }
+
+        private void checkGenderInMemoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Genderchart gc = new Genderchart();
+            gc.ShowDialog();
+        }
+
+        private void checkYearlyEnteringToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Chart c = new Chart();
+            c.ShowDialog();
+        }
     }
 }

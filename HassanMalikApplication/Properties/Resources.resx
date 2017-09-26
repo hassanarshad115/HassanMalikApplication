@@ -139,11 +139,20 @@
   <data name="save as" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save as.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="check gender" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check gender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="newclient" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newclient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="go" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="l" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\l.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home pagee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home pagee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +169,7 @@
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="go" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check memory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check memory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

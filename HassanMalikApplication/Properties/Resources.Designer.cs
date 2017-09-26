@@ -83,6 +83,26 @@ namespace HassanMalikApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_gender {
+            get {
+                object obj = ResourceManager.GetObject("check gender", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap check_memory {
+            get {
+                object obj = ResourceManager.GetObject("check memory", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
@@ -106,6 +126,16 @@ namespace HassanMalikApplication.Properties {
         internal static System.Drawing.Bitmap go {
             get {
                 object obj = ResourceManager.GetObject("go", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_pagee {
+            get {
+                object obj = ResourceManager.GetObject("home pagee", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
