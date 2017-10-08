@@ -47,8 +47,11 @@ namespace HassanMalikApplication
         {
             chart1.DataSource = GetData();
 
-            chart1.Series["Series1"].XValueMember = "Gender";
-            chart1.Series["Series1"].YValueMembers = "Total";
+            //isky bgair ye show ni hoga start krny k bad r [ ] braket ma 
+            //properties ma series ma ja k series pie hoge uska name ha ye series1 wo likhna hota ha name ha
+
+            chart1.Series["Series1"].XValueMember = "Gender"; // sp ma jo name Gender rkha ta ye wo ha
+            chart1.Series["Series1"].YValueMembers = "Total"; // sp ma jo name rkha ta Total ye wo ha
 
         }
 

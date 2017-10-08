@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="captcha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="captcha.Designer.cs">
+      <DependentUpon>captcha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="saw.Designer.cs">
       <DependentUpon>saw.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="captcha.resx">
+      <DependentUpon>captcha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Chart.resx">
       <DependentUpon>Chart.cs</DependentUpon>
     </EmbeddedResource>

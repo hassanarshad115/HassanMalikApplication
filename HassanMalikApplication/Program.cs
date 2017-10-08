@@ -21,7 +21,7 @@ namespace HassanMalikApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new saw());
+            Application.Run(new captcha());
 
             //lg = new login(); ye r nichy wali line on krdyn agr memory ko save krna ha to 
             //104 T

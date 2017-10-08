@@ -27,7 +27,7 @@ namespace HassanMalikApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (IsValidated()) //ye if k sath valid ha ye khali block k lye ha
+            if (IsValidated()) //ye if k sath valid ha ye khali block k lye ha k koi blok empty to ni
             {
 
 
@@ -145,10 +145,11 @@ namespace HassanMalikApplication
             cmd.Parameters.Add("@Ispassword", SqlDbType.Bit).Direction = ParameterDirection.Output;
 
             cmd.Parameters.AddWithValue("@username", usernametextBox.Text);
+            cmd.Parameters.AddWithValue("@password", passwordtextBox.Text);
+
             //Encrypt class bnae ha ak usmy encrypt krny k lye coding ki ha
             //cmd.Parameters.AddWithValue("@password",EncryptClass.encrypt(passwordtextBox.Text));//passwored encrypt hojayga ta k hacking na ho
 
-            cmd.Parameters.AddWithValue("@password",passwordtextBox.Text);
             cmd.ExecuteNonQuery();
 
             //agr ye na kia to GetUserLogin red hojayga error ayga
@@ -164,9 +165,10 @@ namespace HassanMalikApplication
 
 
         //validation check kra ha ye r sath he spaces ko trim k function k sath remove kra ha
-        private bool IsValidated()
+        private bool IsValidated() // ye khud always true return kryga 
         {
-            if (usernametextBox.Text.Trim() == string.Empty)
+            if (usernametextBox.Text.Trim() == string.Empty) // ye always false return kryga
+                // q k isny error btana h k block khali ha
             {
                 MessageBox.Show("Username is Required", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 usernametextBox.Clear();
