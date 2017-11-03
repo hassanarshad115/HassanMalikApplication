@@ -21,11 +21,13 @@ namespace HassanMalikApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new captcha());
+            Application.Run(new  Slider());
 
             //lg = new login(); ye r nichy wali line on krdyn agr memory ko save krna ha to 
             //104 T
             //Application.Run(lg);
+            
+            
         }
     }
 }

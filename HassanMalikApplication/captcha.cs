@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace HassanMalikApplication
 {
-    public partial class captcha : Form
+    public partial class captcha : Syncfusion.Windows.Forms.MetroForm
     {
         public captcha()
         {
@@ -47,7 +47,7 @@ namespace HassanMalikApplication
            var graphic = Graphics.FromImage(image);
 
             //graphic veriable k sath ye asy likhna ha ismy font obj b lna hota ha
-            graphic.DrawString(number.ToString(), font, Brushes.Red, new Point(40, 50));//40 left sy right lany k lye r 50 nichy lany k lye
+            graphic.DrawString(number.ToString(), font, Brushes.Red, new Point(40, 10));//40 left sy right lany k lye r 10 nichy lany k lye
             pictureBox1.Image = image; // fr last ma picturebox k sath image r braber image krdygy
         }
 
